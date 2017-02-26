@@ -15,4 +15,10 @@ router.get('/movies', (req, res) => {
 	res.send(movies)
 })
 
+router.get('/movies/:id', (req, res) => {
+	const id = parseInt(req.params.id)
+	const movie = db.get('movies').find({id: id})
+	res.send(movie)
+})
+
 module.exports = router;
