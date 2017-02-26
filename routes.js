@@ -10,5 +10,9 @@ router.get('/', (req, res) => {
 	res.send('asdfsaf')
 })
 
+router.get('/movies', (req, res) => {
+	const movies = db.get('movies')
+	res.send(movies)
+})
 
 module.exports = router;
