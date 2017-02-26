@@ -2,11 +2,12 @@ const express = require('express')
 const app = express()
 const routes = require('./routes.js')
 const bodyParser = require('body-parser')
+const path = require('path')
 
 
 app.use(bodyParser.json())
 app.use('/', routes)
-app.use(express.static('public'))
+
 
 
 app.listen(8080, ()=> {
