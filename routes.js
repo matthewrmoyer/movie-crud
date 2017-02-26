@@ -15,7 +15,9 @@ router.get('/', (req, res) => {
   res.send('index.html')
 })
 
-
+router.get('/new', (req, res) => {
+	res.sendFile(__dirname + '/public/new.html')
+})
 
 router.get('/movies', (req, res) => {
 	const movies = db.get('movies')
