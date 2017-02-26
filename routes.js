@@ -26,7 +26,13 @@ router.get('/new', (req, res) => {
 // })
 
 router.get('/movies', (req, res) => {
-	res.render('movies', {title:"List Movies Crud", message: 'loop over movies here'})
+	const movieList = db.get('movies')
+	res.render('movies', 
+		{
+			title:"List Movies Crud", 
+			message: 'loop over movies here', 
+			movieList: JSON.stringify(movieList)
+		})
 })
 
 router.get('/movies/:id', (req, res) => {

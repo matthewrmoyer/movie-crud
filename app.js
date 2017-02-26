@@ -10,6 +10,8 @@ app.use('/', routes)
 
 
 app.set('view engine', 'pug')
+app.set("views", path.join(__dirname, "views"));
+
 
 app.listen(8080, ()=> {
 	console.log('listening')
