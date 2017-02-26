@@ -9,6 +9,7 @@ app.use(bodyParser.json())
 app.use('/', routes)
 
 
+app.set('view engine', 'pug')
 
 app.listen(8080, ()=> {
 	console.log('listening')

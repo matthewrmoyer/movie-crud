@@ -8,6 +8,7 @@ const db = low('db/db.json', {
 const path = require('path')
 
 
+
 router.use(express.static(__dirname + '/public'))
 
 
@@ -19,9 +20,13 @@ router.get('/new', (req, res) => {
 	res.sendFile(__dirname + '/public/new.html')
 })
 
+// router.get('/movies', (req, res) => {
+// 	const movies = db.get('movies')
+// 	res.send(movies)
+// })
+
 router.get('/movies', (req, res) => {
-	const movies = db.get('movies')
-	res.send(movies)
+	res.render('movies', {title:"List Movies Crud", message: 'loop over movies here'})
 })
 
 router.get('/movies/:id', (req, res) => {
