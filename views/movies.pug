@@ -1,6 +1,10 @@
 html
-  head
-    title= title
-  body
-    h1= message
-    p= movieList
+	head
+		title= title
+	body
+		h1= message
+		p= movieList
+		ul
+			each val in [1, 2, 3]
+				li= val
+
