@@ -6,9 +6,15 @@ const db = low('db/db.json', {
 	storage: fileAsync
 })
 
+
+router.use(express.static('public'))
+
+
 router.get('/', (req, res) => {
-	res.send('asdfsaf')
+  res.send('index')
 })
+
+
 
 router.get('/movies', (req, res) => {
 	const movies = db.get('movies')
