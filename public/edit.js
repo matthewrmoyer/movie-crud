@@ -13,7 +13,7 @@ $(document).ready(function(){
 			url:'/update',
 			type: 'PUT',
 			data: {
-				"title": title,
+				"name": title,
 				"director": director,
 				"year": year,
 				"rating": rating,

@@ -87,7 +87,7 @@ router.get('/:id/edit', (req, res) => {
 	console.log(targetMovie['name'])
 	console.log(typeof targetMovie)
 	res.render('edit', {
-		title: targetMovie['name'],
+		name: targetMovie['name'],
 		director: targetMovie["director"],
 		year: targetMovie["year"],
 		rating: targetMovie["rating"],
@@ -113,7 +113,7 @@ router.put('/update', (req, res) => {
 	console.log("putttinggg")
 	console.log(req.body)
 	db.get('movies')
-		.find({name: req.body.title})
+		.find({name: req.body.name})
 		.assign(req.body)
 		.write()
 })

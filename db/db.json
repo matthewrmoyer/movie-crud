@@ -4,18 +4,17 @@
       "id": 2,
       "name": "Avatar",
       "director": "James Cameron",
-      "year": "2010",
+      "year": "2011",
       "poster": "www.google.com",
-      "rating": "4",
-      "title": "Avatar"
+      "rating": "4"
     },
     {
       "id": 3,
       "name": "Jurassic Park",
-      "director": "Steven Spielber",
-      "year": 2015,
+      "director": "Steven Spielberg",
+      "year": "1998",
       "poster": "www.google.com",
-      "rating": 3
+      "rating": "3"
     }
   ]
 }
