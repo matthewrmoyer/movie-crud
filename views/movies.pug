@@ -8,8 +8,10 @@ html
 		ul
 			- for (var i = 0; i < movieNamesArray.length; i++)
 				li
-					li(href="movies/"+movieNamesArray[i])= movieNamesArray[i] + " " +movieRatingsArray[i]
-		br
+					li 
+						a(href="movies/"+movieNamesArray[i])= movieNamesArray[i]
+					li 
+						li= movieRatingsArray[i]
 		a(href="new.html") Add Movie
 
 
