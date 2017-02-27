@@ -84,7 +84,7 @@ router.get('/new', (req, res) =>{
 })
 
 router.get('/:id/edit', (req, res) => {
-	res.sendFile(__dirname + '/public/edit.html')
+	res.render('edit')
 })
 
 router.post('/db', (req, res) => {
