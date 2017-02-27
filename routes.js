@@ -49,13 +49,21 @@ router.get('/movies', (req, res) => {
 })
 
 
-router.get('/movies/:title', (req, res) => {
-	const title = req.params.title
-	console.log(title)
+router.get('/movies/:id', (req, res) => {
+	const id = parseInt(req.params.id)
 	const movie = db.get('movies').find({
-		name: title
+		id: id
 	})
 	res.send(movie)
 })
+
+router.get('/movies/:id/edit', (req, res) => {
+	const id = parseInt(req.params.id)
+	const movie = db.get('movies').find({
+		id: id
+	})
+	res.send(movie)
+})
+
 
 module.exports = router;
