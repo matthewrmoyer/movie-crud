@@ -1,29 +1,39 @@
-form
-	input(
-		placeholder="Title"
-		type='input'
-		value=title
-	)
-	input(
-		placeholder="Director"
-		type='input'
-		value=director
-	)
-	input(
-		placeholder="Year"
-		type='input'
-		value=year
-	)
-	input(
-		placeholder="Rating"
-		type='input'
-		value=rating
-	)
-	input(
-		placeholder="Poster URL"
-		type='input'
-		value=poster
-	)
-
-	button(type='submit') Submit
+html
+	head
+		script(src='https://code.jquery.com/jquery-3.1.1.min.js')
+		script(src='/edit.js')
+	body
+		form
+			input(
+				id = "title"
+				placeholder="Title"
+				type='input'
+				value=title
+			)
+			input(
+				id = "director"
+				placeholder="Director"
+				type='input'
+				value=director
+			)
+			input(
+				id = "year"
+				placeholder="Year"
+				type='input'
+				value=year
+			)
+			input(
+				id = "rating"
+				placeholder="Rating"
+				type='input'
+				value=rating
+			)
+			input(
+				id = "poster"
+				placeholder="Poster URL"
+				type='input'
+				value=poster
+			)
+		
+			button(type='submit') Submit
 

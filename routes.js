@@ -109,5 +109,9 @@ router.post('/db', (req, res) => {
 		})
 })
 
+router.put('/update', (req, res) => {
+	console.log("putttinggg")
+	console.log(req.body)
+})
 
 module.exports = router;
