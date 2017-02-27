@@ -71,24 +71,27 @@ router.get('/movies/:title', (req, res) => {
 	res.send(movie)
 })
 
-router.get('/movies/:id/edit', (req, res) => {
-	const id = parseInt(req.params.id)
-	const movie = db.get('movies').find({
-		id: id
-	})
-	res.send(movie)
-})
+
 
 router.get('/new', (req, res) =>{
 	res.render('new')
 })
 
 router.get('/:id/edit', (req, res) => {
-	const movie = db.get('movies').find({
-		name: req.params.id
-	})
+	const title = req.params.id
+	const targetMovie = db.get('movies')
+		.find({
+		name: title
+	}).value()
+
+	console.log(targetMovie['name'])
+	console.log(typeof targetMovie)
 	res.render('edit', {
-		title: movie
+		title: targetMovie['name'],
+		director: targetMovie["director"],
+		year: targetMovie["year"],
+		rating: targetMovie["rating"],
+		poster: targetMovie["poster"]
 	})
 })
 
