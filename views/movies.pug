@@ -1,11 +1,10 @@
 html
 	head
 		title= title
-		style
-			include ../styles/movies-style.css
+		link(rel='stylesheet', href='/style.css')
 	body
 		heading-wrapper
-			h1= message
+			h1= message 
 		ul
 			- for (var i = 0; i < movieNamesArray.length; i++)
 				li
