@@ -69,5 +69,9 @@ router.get('/new', (req, res) =>{
 	res.render('new')
 })
 
+router.post('/db', (req, res) => {
+	console.log("posttttinnnnnngggg")
+})
+
 
 module.exports = router;
