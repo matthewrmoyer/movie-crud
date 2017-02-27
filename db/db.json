@@ -4,9 +4,10 @@
       "id": 2,
       "name": "Avatar",
       "director": "James Cameron",
-      "year": 2010,
+      "year": "2010",
       "poster": "www.google.com",
-      "rating": 4
+      "rating": "4",
+      "title": "Avatar"
     },
     {
       "id": 3,

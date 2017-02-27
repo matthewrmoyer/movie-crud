@@ -112,6 +112,10 @@ router.post('/db', (req, res) => {
 router.put('/update', (req, res) => {
 	console.log("putttinggg")
 	console.log(req.body)
+	db.get('movies')
+		.find({name: req.body.title})
+		.assign(req.body)
+		.write()
 })
 
 module.exports = router;
