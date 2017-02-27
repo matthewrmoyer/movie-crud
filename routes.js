@@ -32,6 +32,7 @@ router.get('/movies', (req, res) => {
 	const movieDataStringified = JSON.stringify(movieData)
 
 	const movieNames = db.get('movies').map('name')
+	const movieRatings = db.get('movies').map('rating')
 
 	var movieNamesArray = []
 	for (var i = 0; i < movieNames.size(); i++) {
@@ -42,11 +43,22 @@ router.get('/movies', (req, res) => {
 
 	}
 
+	var movieRatingsArray=[]
+		for (var i = 0; i < movieRatings.size(); i++) {
+		var movieRating = movieRatings['__wrapped__']['movies'][i]['rating']
+		console.log(movieRating)
+		movieRatingsArray.push(movieRating)
+		console.log(movieRatingsArray)
+	}
+
+
+
 	const movieNamesStringified = JSON.stringify(movieNames)
 	res.render('movies', {
 		title: "List Movies Crud",
 		message: 'Movie Titles',
-		movieNamesArray: movieNamesArray
+		movieNamesArray: movieNamesArray,
+		movieRatingsArray: movieRatingsArray
 	})
 })
 

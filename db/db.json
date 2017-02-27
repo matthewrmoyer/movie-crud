@@ -2,11 +2,13 @@
   "movies": [
     {
       "id": 2,
-      "name": "Avatar"
+      "name": "Avatar",
+      "rating": 4
     },
     {
       "id": 3,
-      "name": "Jurassic Park"
+      "name": "Jurassic Park",
+      "rating": 3
     }
   ]
 }
