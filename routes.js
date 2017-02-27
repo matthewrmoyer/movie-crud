@@ -84,7 +84,12 @@ router.get('/new', (req, res) =>{
 })
 
 router.get('/:id/edit', (req, res) => {
-	res.render('edit')
+	const movie = db.get('movies').find({
+		name: req.params.id
+	})
+	res.render('edit', {
+		title: movie
+	})
 })
 
 router.post('/db', (req, res) => {
