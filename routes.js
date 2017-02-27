@@ -48,10 +48,12 @@ router.get('/movies', (req, res) => {
 	})
 })
 
-router.get('/movies/:id', (req, res) => {
-	const id = parseInt(req.params.id)
+
+router.get('/movies/:title', (req, res) => {
+	const title = req.params.title
+	console.log(title)
 	const movie = db.get('movies').find({
-		id: id
+		name: title
 	})
 	res.send(movie)
 })
