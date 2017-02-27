@@ -3,10 +3,13 @@ a{
 }
 
 body{
-	background-color: blue;
-	color: green;
+	color: blue;
 }
 
-h1{
-	color: orange;
+
+.heading-wrapper{
+	display: flex;
+	justify-content: center;
+	background-color: grey;
+	color: yellow;
 }
