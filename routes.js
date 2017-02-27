@@ -43,8 +43,7 @@ router.get('/movies', (req, res) => {
 	const movieNamesStringified = JSON.stringify(movieNames)
 	res.render('movies', {
 		title: "List Movies Crud",
-		message: 'loop over movies here',
-		movieList: movieNamesStringified,
+		message: 'Movie Titles',
 		movieNamesArray: movieNamesArray
 	})
 })
