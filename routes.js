@@ -1,5 +1,6 @@
 const express = require('express')
 const router = express.Router()
+const bodyParser = require('body-parser')
 const low = require('lowdb')
 const fileAsync = require('lowdb/lib/storages/file-async')
 const db = low('db/db.json', {
@@ -9,6 +10,7 @@ const path = require('path')
 
 
 
+router.use(bodyParser.urlencoded({extended: true}))
 router.use(express.static(__dirname + '/public'))
 
 
@@ -71,6 +73,16 @@ router.get('/new', (req, res) =>{
 
 router.post('/db', (req, res) => {
 	console.log("posttttinnnnnngggg")
+	console.log(req.body)
+	db.get('movies')
+		.push(req.body)
+		.write()
+		.then(newMovie => {
+			res.status(201).send(newMovie)
+		})
+		.catch(err => {
+			console.log(err)
+		})
 })
 
 
