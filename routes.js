@@ -102,7 +102,8 @@ router.post('/db', (req, res) => {
 		.push(req.body)
 		.write()
 		.then(newMovie => {
-			res.status(201).send(newMovie)
+			res.status(201)
+			res.redirect('new.html')
 		})
 		.catch(err => {
 			console.log(err)

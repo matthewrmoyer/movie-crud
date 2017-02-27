@@ -15,6 +15,13 @@
       "year": "1998",
       "poster": "www.google.com",
       "rating": "3"
+    },
+    {
+      "name": "Dope",
+      "director": "Peter",
+      "year": "2015",
+      "rating": "5",
+      "poster": "dope.com"
     }
   ]
 }
