@@ -4,7 +4,15 @@ html
 	body
 		h1= message
 		p= movieList
+		
+		p= movieNamesArray
+
 		ul
 			each val in [1, 2, 3]
 				li= val
+
+		ul
+			- for (var i = 0; i < movieNamesArray.length; i++)
+				li= movieNamesArray[i]
+
 
