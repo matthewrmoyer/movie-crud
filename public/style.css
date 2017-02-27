@@ -96,7 +96,7 @@ https://css-tricks.com/box-sizing/*/
 h1 {
   color: green; }
 
-heading-wrapper {
+.heading-wrapper {
   display: flex;
   justify-content: center;
   background-color: grey;
