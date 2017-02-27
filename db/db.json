@@ -3,7 +3,7 @@
     {
       "id": 2,
       "name": "Avatar",
-      "director": "James Cameron",
+      "director": "Jimmy Cameron",
       "year": "2011",
       "poster": "www.google.com",
       "rating": "4"
@@ -15,6 +15,13 @@
       "year": "1998",
       "poster": "www.google.com",
       "rating": "3"
+    },
+    {
+      "title": "dasf",
+      "director": "asdf",
+      "year": "asdf",
+      "rating": "asfd",
+      "poster": "asdf"
     }
   ]
 }

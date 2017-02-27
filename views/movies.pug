@@ -2,18 +2,23 @@ html
 	head
 		title= title
 		link(rel='stylesheet', href='/style.css')
+		script(src='https://code.jquery.com/jquery-3.1.1.min.js')
+		script(src='/movies.js')
+
 	body
 		.heading-wrapper
 			h1= message 
 		ul
 			- for (var i = 0; i < movieNamesArray.length; i++)
-				li
+				li 
 					li 
 						a(href="movies/"+movieNamesArray[i])= movieNamesArray[i]
 					li 
 						li= movieRatingsArray[i]+" "
 					li
 						a(href =movieNamesArray[i] + "/edit") Edit
+					li
+						button(class=movieNamesArray[i]) Delete
 					br
 		a(href="new.html") Add Movie
 

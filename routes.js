@@ -118,4 +118,12 @@ router.put('/update', (req, res) => {
 		.write()
 })
 
+router.delete('/delete', (req, res) => {
+	console.log('deleteiiinnnnggg')
+	console.log(req.body)
+	db.get('movies')
+		.remove({name: req.body.name})
+		.write()
+})
+
 module.exports = router;
