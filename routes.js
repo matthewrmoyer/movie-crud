@@ -83,6 +83,10 @@ router.get('/new', (req, res) =>{
 	res.render('new')
 })
 
+router.get('/:id/edit', (req, res) => {
+	res.sendFile(__dirname + '/public/edit.html')
+})
+
 router.post('/db', (req, res) => {
 	console.log("posttttinnnnnngggg")
 	console.log(req.body)

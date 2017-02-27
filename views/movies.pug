@@ -11,7 +11,10 @@ html
 					li 
 						a(href="movies/"+movieNamesArray[i])= movieNamesArray[i]
 					li 
-						li= movieRatingsArray[i]
+						li= movieRatingsArray[i]+" "
+					li
+						a(href =movieNamesArray[i] + "/edit") Edit
+					br
 		a(href="new.html") Add Movie
 
 
